@@ -1,0 +1,5 @@
+* text=auto
+
+*.js eol=crlf
+*.json eol=crlf
+*.md eol=crlf
