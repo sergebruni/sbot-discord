@@ -18,7 +18,7 @@ jsonFile.spaces = 2;
 // -- Initialization ---------------------------------------------------------------------------------------------------
 
 client.once("ready", () => {
-	console.log("[Ready] Commander loaded and ready to fail!");
+	console.log("[Ready] SBot ready to command!");
 });
 
 // -- Command Parsers --------------------------------------------------------------------------------------------------
