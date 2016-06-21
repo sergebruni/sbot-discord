@@ -1,4 +1,5 @@
 *.sublime-*
 /node_modules
+config.js
 config.json
 subscriptions.json
