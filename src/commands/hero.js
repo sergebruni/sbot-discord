@@ -39,8 +39,8 @@ class Hero extends Command {
 					count++;
 					if (value.name === params.join(' ')){
 						flag = true;
-				  		console.log(value);
-				  		console.log(value.abilities[value.id]);
+				  		//console.log(value);
+				  		//console.log(value.abilities[value.id]);
 				  		
 						result += `\n${value.name}`;
 						result += `\nHP: ${value.stats[value.id].hp} :heart: /MP: ${value.stats[value.id].mana} :droplet:`;
