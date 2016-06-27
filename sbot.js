@@ -20,6 +20,10 @@ jsonFile.spaces = 2;
 
 client.once("ready", () => {
 	console.log("[Ready] SBot ready to command!");
+	client.setStatus('online', config.game);
+	var channel = client.channels.get("name", "tosnews").id;
+	config.updateChannel = channel;
+	global.bot.client.sendMessage(config.updateChannel, 'SBot ready to command!');
 });
 
 // -- Command Parsers --------------------------------------------------------------------------------------------------
