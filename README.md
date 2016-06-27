@@ -5,3 +5,18 @@ Discord App BOT
 
 - node sbot.js --harmony
 
+
+Commands
+
+/help
+/ping
+
+Hots
+
+- /hero Name
+- /build Name
+
+ToS
+
+- /item name
+- /monster name
