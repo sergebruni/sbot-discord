@@ -22,17 +22,16 @@ class News extends Command {
 
   execute(message) {
 
-        let params = this.getParams(message);
-        let toggle = global.bot.config.newsEnabled;
+    let params = this.getParams(message);
+    let toggle = global.bot.config.newsEnabled;
 
-        if (params[0] != "enable" && params[0] != "disable") toggle = !toggle;
-        else if (params[0] === "enable") toggle = true;
+    if (params[0] != "enable" && params[0] != "disable") toggle = !toggle;
+    else if (params[0] === "enable") toggle = true;
     else if (params[0] === "disable") toggle = false;
 
     console.log(`[News] News feed set to "${toggle}".`)
     global.bot.client.sendMessage(message, `News feed set to "${toggle}".`);
     return this.poll();
-
   }
 
   poll() {
@@ -64,7 +63,6 @@ class News extends Command {
         global.bot.config.newsLatest = feed[0].id; // store the latest id
       }
     });
-
   }
 
   sendQueue() {
@@ -72,9 +70,10 @@ class News extends Command {
     while (this.queue.length) {
       let message = this.queue.pop();
       global.bot.client.sendMessage(global.bot.config.updateChannel, message);
+      global.bot.client.sendMessage(global.bot.config.updateGuildChannel, message);
+
     }
   }
-
 }
 
 // -- Export Variables -------------------------------------------------------------------------------------------------
