@@ -22,8 +22,10 @@ client.once("ready", () => {
 	console.log("[Ready] SBot ready to command!");
 	client.setStatus('online', config.game);
 	var channel = client.channels.get("name", "tosnews").id;
+	var gChannel = client.channels.get("name", "tos-news").id;
 	config.updateChannel = channel;
-	global.bot.client.sendMessage(config.updateChannel, 'SBot ready to command!');
+	config.updateGuildChannel = gChannel;
+	//global.bot.client.sendMessage(config.updateChannel, 'ready to command!');
 });
 
 // -- Command Parsers --------------------------------------------------------------------------------------------------
